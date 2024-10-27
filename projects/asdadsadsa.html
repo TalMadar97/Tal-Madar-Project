@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultation</title>
+    <link rel="stylesheet" href="../Style/consultationstyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .up-border {
+            background: #FDBD03 0% 0% no-repeat padding-box;
+            width: 434px;
+            height: 18px;
+            position: absolute;
+            top: 0;
+            right: 0;
+
+        }
+
+        .left-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-right: 300px;
+
+        }
+
+        .container-img {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .container-img img {
+            width: 400px;
+            height: 600px;
+        }
+
+        .container-icon {
+            width: 95px;
+            height: 95px;
+            background: #FDBD03 0% 0% no-repeat padding-box;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .wp-icon {
+            width: 90px;
+            height: 90px;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            direction: rtl;
+            gap: 1em;
+            height: auto;
+            margin-left: 300px;
+            margin-top: 80px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 2em;
+            width: 100%;
+        }
+
+        .form-title {
+            text-align: right;
+            font: normal normal 900 66px/97px Heebo;
+            color: #FDBD03;
+            margin-bottom: 10px;
+        }
+
+        .form-text {
+            width: 100%;
+            margin-bottom: 20px;
+            text-align: right;
+            font: normal normal normal 20px/29px Heebo;
+            color: #020253;
+        }
+
+        .form-control {
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+        }
+
+        .form-control>label {
+
+            text-align: right;
+            font: normal normal bold 16px/24px Heebo;
+            color: #2C2C2C;
+        }
+
+        .form-control>input {
+            background: #E5EEFF 0% 0% no-repeat padding-box;
+            width: 418px;
+            height: 50px;
+            border-bottom: #FDBD03 4PX solid;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+
+        }
+
+        textarea {
+            background: #E5EEFF 0% 0% no-repeat padding-box;
+            width: 854px;
+            height: 143px;
+            resize: none;
+            border-bottom: #FDBD03 4PX solid;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+        }
+
+        .form>button {
+            width: 166px;
+            height: 50px;
+            background: #FDBD03 0% 0% no-repeat padding-box;
+            text-align: center;
+            font: normal normal bold 22px/30px Heebo;
+            letter-spacing: 0.33px;
+            color: #000000;
+            border: none;
+            margin-top: 74px;
+        }
+
+        .container-gallery {
+            display: flex;
+            align-self: flex-end;
+            gap: 40px;
+            margin-top: 200px;
+            padding-right: 10px;
+            border-bottom: 8px #FDBD03 solid;
+        }
+
+        .container-gallery img {
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+        }
+
+        @media (max-width: 1200px) {
+
+            .up-border {
+                width: 90%;
+            }
+
+            .container {
+                flex-direction: column-reverse;
+                height: 100vh;
+                width: 100vw;
+            }
+
+            .container-img {
+                /* display: flex;
+                align-items: center; */
+                flex-direction: column-reverse;
+            }
+
+            .container-img img {
+
+                width: 79px;
+                height: 119px;
+                position: absolute;
+                margin-top: 70px;
+                margin-right: 400px;
+            }
+
+            #wp-container {
+                display: none;
+            }
+
+            .form {
+                /* display: flex;
+                flex-direction: column;
+                margin-top: 0px;
+                width: 100%;
+                padding: 0 43px; */
+                /* height: 25vh; */
+                width: 80vw;
+                position: absolute;
+                margin-top: 0px;
+                display: flex;
+                flex-direction: column;
+
+            }
+
+            .form-title {
+                font: normal normal 900 40px/59px Heebo;
+                width: 350px;
+            }
+
+            .form-text {
+                font: normal normal normal 15px/22px Heebo;
+                width: 200px;
+            }
+
+            .form-control {
+                width: 30px;
+            }
+
+            .form-control>label {
+                font: normal normal bold 10px/14px Heebo;
+
+            }
+
+
+            .form-control>input {
+                border-bottom: #FDBD03 4PX solid;
+
+
+            }
+
+            .textarea {
+                width: 200px;
+                height: 60px;
+                border-bottom: #FDBD03 4PX solid;
+                padding: 0 43px;
+
+            }
+
+            .form>button {
+                font: normal normal bold 15px/21px Heebo;
+            }
+
+            .container-gallery {
+                display: flex;
+                align-self: flex-end;
+                width: 45px;
+                height: 46px;
+                gap: 40px;
+                border-bottom: 8px #FDBD03 solid;
+                margin-bottom: 80px;
+            }
+
+            .container-gallery img {
+                width: 45px;
+                height: 46px;
+                border-radius: 50%;
+            }
+
+            footer {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="up-border"></div>
+    <div class="container">
+        <div class="left-container">
+            <div class="container-icon" id="wp-container">
+                <div class="wp-icon">
+                    <img src="../Images/project/whatsapp icon.png" alt="whatsapp icon">
+                </div>
+            </div>
+
+
+            <form class="form">
+                <h1 class="form-title">ייעוץ חינם</h1>
+                <p class="form-text">לקבלת ייעוץ חינם, מוזמנים להשאיר פרטים ומומחה יחזור אליכם עם מענה.
+                </p>
+
+                <div class="form-row">
+                    <div class="form-control">
+                        <label for="name">שם מלא</label>
+                        <input id="name" type="name" required>
+                    </div>
+
+                    <div class="form-control">
+                        <label for="email">דוא"ל</label>
+                        <input id="email" type="email" required>
+                    </div>
+                </div>
+                <div class="form-control">
+                    <label for="text area">פרטים נוספים</label>
+                    <textarea id="text area"></textarea>
+                </div>
+
+                <button type="submit">שליחה</button>
+            </form>
+            <footer>
+                <div class="container-gallery">
+
+                    <div class="container-icon">
+                        <img src="../Images/project/facebook icon.png" alt="Facebook icon" class="gallery-icon">
+                    </div>
+
+                    <div class="container-icon">
+                        <img src="../Images/project/instagrram icon.png" alt="Instagram icon" class="gallery-icon">
+                    </div>
+
+
+                    <div class="container-icon">
+                        <img src="../Images/project/linkdin icon.png" alt="Linkedin icon" class="gallery-icon">
+                    </div>
+
+                    <div class="container-icon">
+                        <img src="../Images/project/phone icon.png" alt="Phone icon" class="gallery-icon">
+                    </div>
+            </footer>
+        </div>
+    </div>
+
+
+    <div class="container-img">
+        <img src="../Images/project/consultation.png" alt="consultation">
+    </div>
+    </div>
+
+</body>
+
+</html>
